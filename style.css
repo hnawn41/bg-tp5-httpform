@@ -1,0 +1,265 @@
+/* ===== Base ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 40px 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #1a1a2e;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  background-attachment: fixed;
+}
+
+/* ===== Carte principale ===== */
+.container {
+  max-width: 820px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+main {
+  padding: 28px 32px 40px;
+}
+
+/* ===== En-tête ===== */
+header {
+  position: relative;
+  overflow: hidden;
+  padding: 36px 20px;
+  text-align: center;
+  color: #ffffff;
+  background: linear-gradient(135deg, #e94560, #c62a47);
+}
+
+header h1 {
+  margin: 0 0 6px;
+  font-size: 2rem;
+}
+
+header p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Clap décoratif  */
+header::after {
+  content: "🎬";
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  font-size: 7rem;
+  opacity: 0.15;
+  transform: rotate(10deg);
+}
+
+/* ===== Message d'accroche ===== */
+.tip {
+  margin: 0 0 24px;
+  padding: 12px 16px;
+  font-size: 0.85rem;
+  color: #7a5c00;
+  background: #fff6d6;
+  border: 1px solid #ffe69c;
+  border-radius: 8px;
+}
+
+/* ===== Sections ===== */
+section {
+  margin-bottom: 24px;
+  padding: 24px;
+  background: #fcfcfd;
+  border: 1px solid #eef0f4;
+  border-left: 4px solid #e94560;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+  margin: 0 0 20px;
+  font-size: 1.1rem;
+}
+
+/* ===== Champs ===== */
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.field {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="url"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 11px 14px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  color: #1a1a2e;
+  background: #ffffff;
+  border: 1px solid #dde1e7;
+  border-radius: 8px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #e94560;
+  box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.15);
+}
+
+::placeholder {
+  color: #8a909c;
+}
+
+select[multiple] {
+  padding: 10px 14px;
+}
+
+textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+/* ===== Groupes de choix (radio / checkbox) ===== */
+fieldset {
+  margin: 0 0 20px;
+  padding: 8px 16px 12px;
+  border: 1px solid #dde1e7;
+  border-radius: 12px;
+}
+
+legend {
+  padding: 0 10px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #e94560;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+  padding: 12px 14px;
+  font-size: 0.85rem;
+  font-weight: 400;
+  background: #f8f9fb;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.option input {
+  margin: 0;
+  accent-color: #e94560;
+}
+
+/* ===== Curseur ===== */
+.range-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 0.85rem;
+}
+
+input[type="range"] {
+  flex: 1;
+  accent-color: #e94560;
+}
+
+output {
+  min-width: 52px;
+  padding: 6px 12px;
+  text-align: center;
+  font-weight: 700;
+  color: #ffffff;
+  background: #e94560;
+  border-radius: 20px;
+}
+
+/* ===== Couleur ===== */
+input[type="color"] {
+  width: 90px;
+  height: 44px;
+  padding: 4px;
+  background: #ffffff;
+  border: 1px solid #dde1e7;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ===== Fichiers  ===== */
+input[type="file"] {
+  padding: 12px;
+  font-family: inherit;
+  font-size: 0.8rem;
+  background: #ffffff;
+  border: 2px dashed #d5d9e0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.hint {
+  margin: 0;
+  font-size: 0.78rem;
+  color: #6b7280;
+}
+
+/* ===== Bouton d'envoi ===== */
+button[type="submit"] {
+  display: block;
+  margin: 32px auto 0;
+  padding: 16px 44px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(135deg, #e94560, #c62a47);
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 8px 20px rgba(233, 69, 96, 0.4);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+button[type="submit"]:hover {
+  transform: translateY(-2px);
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 600px) {
+  main {
+    padding: 20px 16px 32px;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+  }
+}
